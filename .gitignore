@@ -4,9 +4,11 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
+*.egg
 *.egg-info/
 dist/
 build/
+wheels/
 .eggs/
 
 # Virtual environments
@@ -15,22 +17,58 @@ venv/
 env/
 ENV/
 
-# Secrets & config
+# Secrets & credentials
 .env
 .env.*
+!.env.example
 secrets.toml
 .streamlit/secrets.toml
+*.pem
+*.key
+*.p12
+*.pfx
 
-# Streamlit cache
+# Streamlit cache & local artifacts
 .streamlit/cache/
+
+# Data files (large or generated)
+*.csv
+*.parquet
+*.feather
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs & temp
+*.log
+tmp/
+temp/
 
 # Jupyter
 .ipynb_checkpoints/
+*.ipynb
 
 # macOS
 .DS_Store
+._*
+Thumbs.db
 
 # IDEs
 .vscode/
 .idea/
 *.swp
+*.swo
+*~
+
+# Testing & coverage
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+# Playwright / browser automation
+.playwright-mcp/
+playwright-report/
+test-results/
+*.png
+*.jpeg
